@@ -52,17 +52,36 @@
 // Arithmetic operators (*, /) to compute BMI.
 // Comparison operators (<, >=, <=) for range checks.
 // A chain of if / else if / else statements to pick the correct category.
-function bmiAdvice(weightKg, heightM) {
-  let rawbmi = 0;
-  rawbmi = weightKg / (heightM * heightM);
-  let bmi = Math.floor(rawbmi * 100) / 100;
-  if (bmi < 18.5) {
-    return `${bmi} is Underweight - Tip: You need to gain weight`;
-  } else if (bmi <= 18.5 || bmi <= 24.9) {
-    return `${bmi} is Normal - Tip: keep up the healthy lifestyle`;
-  } else if (bmi <= 25.0 || bmi <= 29.9) {
-    return `${bmmi} is Overweight - Tip: Consider a balance diet`;
-  } else return `${bmi} is Obese - Tip: Consult a healtcare provider`;
+// function bmiAdvice(weightKg, heightM) {
+//   let rawbmi = 0;
+//   rawbmi = weightKg / (heightM * heightM);
+//   let bmi = Math.floor(rawbmi * 100) / 100;
+//   if (bmi < 18.5) {
+//     return `${bmi} is Underweight - Tip: You need to gain weight`;
+//   } else if (bmi <= 18.5 || bmi <= 24.9) {
+//     return `${bmi} is Normal - Tip: keep up the healthy lifestyle`;
+//   } else if (bmi <= 25.0 || bmi <= 29.9) {
+//     return `${bmmi} is Overweight - Tip: Consider a balance diet`;
+//   } else return `${bmi} is Obese - Tip: Consult a healtcare provider`;
+// }
+// let res = bmiAdvice(59, 1.85);
+// console.log(res);
+
+// Queestion 06 (INTERVIEW SPECIAL⭐️)
+// write a function fizzBuzz(n) that takes a poitive integer n and returns a string based on these rules:
+// If n is divisible by both 3 and 5 → return "FizzBuzz".
+// If n is divisible by 3 (but not 5) → return "Fizz".
+// If n is divisible by 5 (but not 3) → return "Buzz".
+// Otherwise → return the number itself as a string (e.g., "7").
+
+function fizzBuzz(n) {
+  if (n % 3 === 0 && n % 5 === 0) {
+    return `${n} is FizzBuzz`;
+  } else if (n % 3 === 0 && n % 5 != 0) {
+    return `${n} is Fizz`;
+  } else if (n % 5 === 0 && n % 3 != 0) {
+    return `${n} is Buzz`;
+  } else return `${n} is Not Fizz or Buzz Soory 😟`;
 }
-let res = bmiAdvice(59, 1.85);
+let res = fizzBuzz(15);
 console.log(res);
