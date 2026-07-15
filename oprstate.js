@@ -73,15 +73,49 @@
 // If n is divisible by 3 (but not 5) → return "Fizz".
 // If n is divisible by 5 (but not 3) → return "Buzz".
 // Otherwise → return the number itself as a string (e.g., "7").
+// function fizzBuzz(n) {
+//   if (n % 3 === 0 && n % 5 === 0) {
+//     return `${n} is FizzBuzz`;
+//   } else if (n % 3 === 0 && n % 5 != 0) {
+//     return `${n} is Fizz`;
+//   } else if (n % 5 === 0 && n % 3 != 0) {
+//     return `${n} is Buzz`;
+//   } else return `${n} is Not Fizz or Buzz Soory 😟`;
+// }
+// let res = fizzBuzz(15);
+// console.log(res);
 
-function fizzBuzz(n) {
-  if (n % 3 === 0 && n % 5 === 0) {
-    return `${n} is FizzBuzz`;
-  } else if (n % 3 === 0 && n % 5 != 0) {
-    return `${n} is Fizz`;
-  } else if (n % 5 === 0 && n % 3 != 0) {
-    return `${n} is Buzz`;
-  } else return `${n} is Not Fizz or Buzz Soory 😟`;
+// Question 07 (INTERVIEW SPECIAL⭐️)
+// Write a function triangleType(a, b, c) that takes three numbers (side lengths) and returns:
+// "Invalid" if:
+// Any side is <= 0, OR
+// The triangle inequality theorem is violated: the sum of any two sides must be greater than the third side (i.e., a + b > c, a + c > b, and b + c > a all must be true).
+// Else if all three sides are equal → "Equilateral".
+// Else if exactly two sides are equal → "Isosceles".
+// Else (no sides equal) → "Scalene".
+
+function triangleType(a, b, c) {
+  // if any side is === 0 logic below
+  if (a <= 0 || b <= 0 || c <= 0) {
+    return `Invalid sides contains 0(zero)`;
+  }
+  // if any of the side is violated condition logic below
+  if (a + b <= c || a + c <= b || b + c <= a) {
+    return `Invalid Sides`;
+  }
+  // Now the logic if all sides are equal to each other
+  if (a === b && b === c) {
+    return ` All sides are Equilateral`;
+  }
+  // Now if only 2 sides are equal to each other
+  else if (a === b || b === c || a === c) {
+    return ` Only 2 sides are Isosceles`;
+  }
+  // If no sides are equal
+  else {
+    return `sides are Scalene`;
+  }
 }
-let res = fizzBuzz(15);
+
+let res = triangleType(1, 5, 5);
 console.log(res);
