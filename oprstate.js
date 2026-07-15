@@ -94,28 +94,28 @@
 // Else if exactly two sides are equal → "Isosceles".
 // Else (no sides equal) → "Scalene".
 
-function triangleType(a, b, c) {
-  // if any side is === 0 logic below
-  if (a <= 0 || b <= 0 || c <= 0) {
-    return `Invalid sides contains 0(zero)`;
-  }
-  // if any of the side is violated condition logic below
-  if (a + b <= c || a + c <= b || b + c <= a) {
-    return `Invalid Sides`;
-  }
-  // Now the logic if all sides are equal to each other
-  if (a === b && b === c) {
-    return ` All sides are Equilateral`;
-  }
-  // Now if only 2 sides are equal to each other
-  else if (a === b || b === c || a === c) {
-    return ` Only 2 sides are Isosceles`;
-  }
-  // If no sides are equal
-  else {
-    return `sides are Scalene`;
-  }
-}
+// function triangleType(a, b, c) {
+//   // if any side is === 0 logic below
+//   if (a <= 0 || b <= 0 || c <= 0) {
+//     return `Invalid sides contains 0(zero)`;
+//   }
+//   // if any of the side is violated condition logic below
+//   if (a + b <= c || a + c <= b || b + c <= a) {
+//     return `Invalid Sides`;
+//   }
+//   // Now the logic if all sides are equal to each other
+//   if (a === b && b === c) {
+//     return ` All sides are Equilateral`;
+//   }
+//   // Now if only 2 sides are equal to each other
+//   else if (a === b || b === c || a === c) {
+//     return ` Only 2 sides are Isosceles`;
+//   }
+//   // If no sides are equal
+//   else {
+//     return `sides are Scalene`;
+//   }
+// }
 
-let res = triangleType(1, 5, 5);
-console.log(res);
+// let res = triangleType(1, 5, 5);
+// console.log(res);
