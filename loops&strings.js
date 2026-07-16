@@ -19,3 +19,23 @@
 //     console.log(i);
 //   }
 // }
+
+// Question 02
+// Create a game where you start with any random game number. Ask the user to keep guessing the number until the user enters correct value.
+function randomGame(inputnum) {
+  let maxnumber = 11;
+  result = 0;
+  result = Math.floor(Math.random() * maxnumber);
+  for (let i = result; i <= maxnumber; i++) {
+    return inputnum === result
+      ? console.log(
+          `You Win 🥇 Input Number =  ${inputnum} is Equals to Random Numner = ${result}`,
+        )
+      : console.log(
+          `Try Again 😢 Input Number =  ${inputnum} is Equals to Random Numner = ${result}`,
+        );
+  }
+}
+
+let theResult = randomGame(2);
+console.log(theResult);
