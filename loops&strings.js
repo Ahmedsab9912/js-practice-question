@@ -22,20 +22,54 @@
 
 // Question 02
 // Create a game where you start with any random game number. Ask the user to keep guessing the number until the user enters correct value.
-function randomGame(inputnum) {
-  let maxnumber = 11;
-  result = 0;
-  result = Math.floor(Math.random() * maxnumber);
-  for (let i = result; i <= maxnumber; i++) {
-    return inputnum === result
-      ? console.log(
-          `You Win 🥇 Input Number =  ${inputnum} is Equals to Random Numner = ${result}`,
-        )
-      : console.log(
-          `Try Again 😢 Input Number =  ${inputnum} is Equals to Random Numner = ${result}`,
-        );
+// function randomGame(inputnum) {
+//   let maxnumber = 11;
+//   result = 0;
+//   result = Math.floor(Math.random() * maxnumber);
+//   for (let i = result; i <= maxnumber; i++) {
+//     return inputnum === result
+//       ? console.log(
+//           `You Win 🥇 Input Number =  ${inputnum} is Equals to Random Numner = ${result}`,
+//         )
+//       : console.log(
+//           `Try Again 😢 Input Number =  ${inputnum} is Equals to Random Numner = ${result}`,
+//         );
+//   }
+// }
+
+// let theResult = randomGame(2);
+// console.log(theResult);
+
+// Question 03
+// Write a function fizzBuzzSum(n) that takes a positive integer n, loops through all numbers from 1 to n(inclusive), and returns an object containing:
+// sumFizz: sum of all numbers divisible by 3 (but not 5).
+// sumBuzz: sum of all numbers divisible by 5 (but not 3).
+// sumFizzBuzz: sum of all numbers divisible by both 3 and 5.
+// totalSum: sum of all numbers from 1 to n.
+
+function fizzBuzzSum(n) {
+  let sumFizz = 0;
+  let sumBuzz = 0;
+  let fizzBuzzSum = 0;
+  let totalSum = 0;
+
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 !== 0) {
+      sumFizz += i;
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+      sumBuzz += i;
+    } else if (i % 5 === 0 && i % 3 === 0) {
+      fizzBuzzSum += i;
+    }
+    totalSum += i;
   }
+  return {
+    sumFizz: sumFizz,
+    sumBuzz: sumBuzz,
+    fizzBuzzSum: fizzBuzzSum,
+    totalSum: totalSum,
+  };
 }
 
-let theResult = randomGame(2);
-console.log(theResult);
+let r = fizzBuzzSum(11);
+console.log(r);
