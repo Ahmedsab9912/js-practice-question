@@ -47,29 +47,71 @@
 // sumFizzBuzz: sum of all numbers divisible by both 3 and 5.
 // totalSum: sum of all numbers from 1 to n.
 
-function fizzBuzzSum(n) {
-  let sumFizz = 0;
-  let sumBuzz = 0;
-  let fizzBuzzSum = 0;
-  let totalSum = 0;
+// function fizzBuzzSum(n) {
+//   let sumFizz = 0;
+//   let sumBuzz = 0;
+//   let fizzBuzzSum = 0;
+//   let totalSum = 0;
 
-  for (let i = 1; i <= n; i++) {
-    if (i % 3 === 0 && i % 5 !== 0) {
-      sumFizz += i;
-    } else if (i % 5 === 0 && i % 3 !== 0) {
-      sumBuzz += i;
-    } else if (i % 5 === 0 && i % 3 === 0) {
-      fizzBuzzSum += i;
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0 && i % 5 !== 0) {
+//       sumFizz += i;
+//     } else if (i % 5 === 0 && i % 3 !== 0) {
+//       sumBuzz += i;
+//     } else if (i % 5 === 0 && i % 3 === 0) {
+//       fizzBuzzSum += i;
+//     }
+//     totalSum += i;
+//   }
+//   return {
+//     sumFizz: sumFizz,
+//     sumBuzz: sumBuzz,
+//     fizzBuzzSum: fizzBuzzSum,
+//     totalSum: totalSum,
+//   };
+// }
+
+// let r = fizzBuzzSum(11);
+// console.log(r);
+
+// Question 04
+// Write a function charFrequency(str) that takes a string str and returns an object where:
+// Keys are the unique characters (case-sensitive! 'a' and 'A' are different).
+// Values are the count of how many times that character appears.
+// Special rule: Ignore spaces (' ') – do not count them.
+// After building the frequency object, also return the total number of characters counted (excluding spaces) as a property totalCount in the same object.
+
+function charFrequency(str) {
+  // 1. Create our blank tally sheet object and a counter for totals
+  let frequency = {};
+  let totalCount = 0;
+
+  // 2. Loop through every character in the string
+  for (let char of str) {
+    // Special rule: Ignore spaces
+    if (char === " ") {
+      continue; // Skip this iteration and go to the next character
     }
-    totalSum += i;
+
+    // If the character already exists in the object, add 1.
+    // Otherwise, initialize it at 1.
+    if (frequency[char]) {
+      frequency[char] += 1;
+    } else {
+      frequency[char] = 1;
+    }
+
+    // Increment our total count tracker
+    totalCount += 1;
   }
-  return {
-    sumFizz: sumFizz,
-    sumBuzz: sumBuzz,
-    fizzBuzzSum: fizzBuzzSum,
-    totalSum: totalSum,
-  };
+
+  // 3. Add the totalCount property to the final object
+  frequency.totalCount = totalCount;
+
+  // 4. Return the complete object
+  return frequency;
 }
 
-let r = fizzBuzzSum(11);
-console.log(r);
+// Test the function
+let result = charFrequency("AAhmed");
+console.log(result);
