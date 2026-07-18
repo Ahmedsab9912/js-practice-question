@@ -90,7 +90,7 @@ function charFrequency(str) {
   for (let char of str) {
     // Special rule: Ignore spaces
     if (char === " ") {
-      continue; // Skip this iteration and go to the next character
+      continue; // Skip this iteration and go to the next character logic 
     }
 
     // If the character already exists in the object, add 1.
