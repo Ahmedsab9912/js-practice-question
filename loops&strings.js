@@ -82,36 +82,27 @@
 // After building the frequency object, also return the total number of characters counted (excluding spaces) as a property totalCount in the same object.
 
 function charFrequency(str) {
-  // 1. Create our blank tally sheet object and a counter for totals
+  // variables to store values
   let frequency = {};
   let totalCount = 0;
 
-  // 2. Loop through every character in the string
+  // now using for loop to get stings frequency + total count
   for (let char of str) {
-    // Special rule: Ignore spaces
     if (char === " ") {
-      continue; // Skip this iteration and go to the next character logic 
+      // If there is empty space it will continue
+      continue;
     }
-
-    // If the character already exists in the object, add 1.
-    // Otherwise, initialize it at 1.
+    // this contidition is for the addinf frequency in empty variable for calculation
     if (frequency[char]) {
       frequency[char] += 1;
     } else {
       frequency[char] = 1;
     }
-
-    // Increment our total count tracker
-    totalCount += 1;
+    totalCount++;
   }
-
-  // 3. Add the totalCount property to the final object
   frequency.totalCount = totalCount;
-
-  // 4. Return the complete object
   return frequency;
 }
 
-// Test the function
-let result = charFrequency("AAhmed");
-console.log(result);
+let r = charFrequency("Ahmed ejaz");
+console.log(r);
