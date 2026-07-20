@@ -81,28 +81,34 @@
 // Special rule: Ignore spaces (' ') – do not count them.
 // After building the frequency object, also return the total number of characters counted (excluding spaces) as a property totalCount in the same object.
 
-function charFrequency(str) {
-  // variables to store values
-  let frequency = {};
-  let totalCount = 0;
+// function charFrequency(str) {
+//   // variables to store values
+//   let frequency = {};
+//   let totalCount = 0;
 
-  // now using for loop to get stings frequency + total count
-  for (let char of str) {
-    if (char === " ") {
-      // If there is empty space it will continue
-      continue;
-    }
-    // this contidition is for the addinf frequency in empty variable for calculation
-    if (frequency[char]) {
-      frequency[char] += 1;
-    } else {
-      frequency[char] = 1;
-    }
-    totalCount++;
-  }
-  frequency.totalCount = totalCount;
-  return frequency;
-}
+//   // now using for loop to get stings frequency + total count
+//   for (let char of str) {
+//     if (char === " ") {
+//       // If there is empty space it will continue
+//       continue;
+//     }
+//     // this contidition is for the addinf frequency in empty variable for calculation
+//     if (frequency[char]) {
+//       frequency[char] += 1;
+//     } else {
+//       frequency[char] = 1;
+//     }
+//     totalCount++;
+//   }
+//   frequency.totalCount = totalCount;
+//   return frequency;
+// }
 
-let r = charFrequency("Ahmed ejaz");
-console.log(r);
+// let r = charFrequency("Ahmed ejaz");
+// console.log(r);
+
+// Question 05
+// Enter the user full name? Generate a username for them based on the input. Start username, with @, followed by their full name and ending with the full name length. eg "ahmedbaig" output should be => "@ahmedbaig9";
+let userName = 'AhmedBaig';
+let nameLength = userName.length;
+console.log(`Orignal username is ${userName} and after prompting we got "@${userName}${nameLength}"`);
