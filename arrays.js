@@ -30,18 +30,47 @@
 // b. Remove Uber & Add Ola in its place
 // c. Add Amazon at the end .
 
-let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
-// Now we are Removing first company from array : 
-// companies.shift();
+// let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+// // Now we are Removing first company from array :
+// // companies.shift();
+// // console.log(companies);
+
+// // // Now Removing UBER and Adding Old in its place :
+// // companies.splice(2,1,'Ola');
+// // console.log(companies);
+
+// // Now Adding Amazon in the End of the List :
+// companies.push("Amazon");
 // console.log(companies);
 
-// // Now Removing UBER and Adding Old in its place : 
-// companies.splice(2,1,'Ola');
-// console.log(companies);
+// Question 04
+// Task:
+// Write a function filterAndDouble(arr) that:
+// Takes an array of numbers.
+// Returns a new array containing only the even numbers, each multiplied by 2.
+// Do not modify the original array.
+// Constraints:
+// Use filter and map (preferred, to practice array methods).
+// Or use a for loop and push – your choice.
 
-// Now Adding Amazon in the End of the List : 
-companies.push("Amazon");
-console.log(companies);
+// Method 01
+// function filterAndDouble(arr) {
+//   return arr.filter((num) => num % 2 === 0).map((num) => num * 2);
+// }
+// let result = filterAndDouble([1,2,3,4,5,6,7,8,9]);
+// console.log(result);
 
+// Method 02
+function filterAndDouble(arr) {
+  // Assign new Empty Array
+  let newArray = [];
+  for (let num of arr) {
+    if (num % 3 === 0) {
+      newArray.push(num * 2);
+    }
+  }
+  return newArray;
+}
+let result = filterAndDouble([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+console.log(result);
 
- 
