@@ -109,6 +109,6 @@
 
 // Question 05
 // Enter the user full name? Generate a username for them based on the input. Start username, with @, followed by their full name and ending with the full name length. eg "ahmedbaig" output should be => "@ahmedbaig9";
-let userName = 'AhmedBaig';
-let nameLength = userName.length;
-console.log(`Orignal username is ${userName} and after prompting we got "@${userName}${nameLength}"`);
+// let userName = 'AhmedBaig';
+// let nameLength = userName.length;
+// console.log(`Orignal username is ${userName} and after prompting we got "@${userName}${nameLength}"`);
