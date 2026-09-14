@@ -61,16 +61,30 @@
 // console.log(result);
 
 // Method 02
-function filterAndDouble(arr) {
-  // Assign new Empty Array
-  let newArray = [];
-  for (let num of arr) {
-    if (num % 3 === 0) {
-      newArray.push(num * 2);
-    }
-  }
-  return newArray;
-}
-let result = filterAndDouble([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-console.log(result);
+// function filterAndDouble(arr) {
+//   // Assign new Empty Array
+//   let newArray = [];
+//   for (let num of arr) {
+//     if (num % 3 === 0) {
+//       newArray.push(num * 2);
+//     }
+//   }
+//   return newArray;
+// }
+// let result = filterAndDouble([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+// console.log(result);
+
+// Question 05
+//Task:
+// Write a function mostFrequent(arr) that:
+// Takes an array of elements (can be strings, numbers, or mixed).
+// Returns the element that appears most often.
+// If the array is empty, return null.
+// Required steps:
+// Build an object (frequency map) where keys are the array items and values are their counts.
+// Iterate through the object to find the key with the maximum value.
+// Return that key
+
+
+
 
