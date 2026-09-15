@@ -170,11 +170,60 @@
 //   }
 // }
 
-// Ask the user number and check weather its odd or even .
+// // Ask the user number and check weather its odd or even .
 
-function checkOddEvn(n) {
-  n % 2 === 0
-    ? console.log(`${n} is Even Number`)
-    : console.log(`${n} is Odd Number`);
-}
-checkOddEvn(97);
+// function checkOddEvn(n) {
+//   n % 2 === 0
+//     ? console.log(`${n} is Even Number`)
+//     : console.log(`${n} is Odd Number`);
+// }
+// checkOddEvn(97);
+
+// // Print all numbers between 1 to 50 that are divisible by 3 and 5
+
+// let n = 50;
+// for (let i = 1; i <= n; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log(`${i} is divisible by 3 and 5`);
+//   }
+// }
+
+// // write a loop from 1 to 100 that:
+// // Prints each number
+// // Stops completely when it finds the first number div by 7
+
+// for (let i = 1; i < 101; i++) {
+//   console.log(i);
+//   if (i % 7 === 0) {
+//     break;
+//   }
+// }
+
+// Write a loop from 1 to 20 that :
+// Skips number divisible bt 3
+// Prints all others
+
+// Use continue
+
+// Expected output : (1,2,4,5,7,8.. 20)
+
+// for (let i = 1; i < 21; i++) {
+//   if (i % 3 !=== 0) {
+//     console.log(i);
+//   }
+// }
+
+// Write a loop from 1 to 100 that:
+// Print only 5 odd numbers
+// then stops the loop
+
+// use both if, continue and a counter + break
+
+// Expected output : 1,3,5,7,9;
+// let count = 0;
+// for (let i = 1; i < 101; i++) {
+//   if (i % 2 === 0) continue;
+//   count++;
+//   console.log(i, count);
+//   if (count === 5) break;
+// }
