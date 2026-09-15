@@ -112,3 +112,69 @@
 // let userName = 'AhmedBaig';
 // let nameLength = userName.length;
 // console.log(`Orignal username is ${userName} and after prompting we got "@${userName}${nameLength}"`);
+
+// Print Number from 1 to 10 using a for loop.
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// Print numbers from 10 to 1 using a while loop
+
+// let i = 10;
+// while (i >= 1) {
+//   console.log(i);
+//   i--;
+// }
+
+// Print even numbers from 1 to 20
+
+// let n = 20;
+// for (let i = 0; i <= n; i++) {
+//   if (i % 2 == 0) {
+//     console.log(`Even Number ${i}`);
+//   }
+// }
+
+// // Print Odd numbers 1 to 15 using a while loop
+
+// let n = 15;
+// let i = 0;
+// while (i <= n) {
+//   if (i % 3 == 0) {
+//     console.log(`Odd ${i}`);
+//   }
+//   i++;
+// }
+
+// // Print the multiplication table of 5 (i.e., 5 x 1 = 5 .. 5 x 10 = 50)
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`2 x ${i} = ${i * 2}`);
+// }
+
+// // Find the sum of numbers from 1 to 100 using a loop.
+
+// let sum = 0;
+// for (let i = 1; i <= 100; i++) {
+//   sum = sum + i
+// }
+// console.log(sum);
+
+// // Print all numbers between 1 to 50 that are divisible by 3
+
+// let n = 50;
+// for (let i = 1; i <= n; i++) {
+//   if (i % 3 === 0) {
+//     console.log(`${i} is divisible by 3`);
+//   }
+// }
+
+// Ask the user number and check weather its odd or even .
+
+function checkOddEvn(n) {
+  n % 2 === 0
+    ? console.log(`${n} is Even Number`)
+    : console.log(`${n} is Odd Number`);
+}
+checkOddEvn(97);
