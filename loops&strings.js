@@ -228,3 +228,19 @@
 //   if (count === 5) break;
 // }
 
+// if 0-5000 // 5001-6000 5% // 6001-7000 %10 // 7001-100000
+
+let myNum = 6003;
+let discount = 0;
+if (myNum > 0 && myNum <= 5000) {
+  console.log(`No discount`);
+} else if (myNum >= 5001 && myNum <= 6000) {
+  discount = myNum * 0.95;
+  console.log(`5% Doscount of ${myNum}$ is ${Math.floor(discount)}`);
+} else if (myNum >= 6001 && myNum <= 7000) {
+  discount = myNum * 0.9;
+  console.log(`10% Doscount of ${myNum}$ is ${Math.floor(discount)}`);
+} else if (myNum >= 7001 && myNum <= 8000) {
+  discount = myNum * 0.85;
+  console.log(`15% Doscount of ${myNum}$ is ${Math.floor(discount)}`);
+}
